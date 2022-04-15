@@ -9,16 +9,16 @@
       </a>
     </li>
     <li>
-      <a href="mailto:Izawa3110.@gmail.com">
+      <a href="mailto:izawa3110.@gmail.com">
         <div class="icon">
           <Icon type="mail" />
         </div>
-        <span>Izawa3110.@gmail.com</span>
+        <span>izawa3110.@gmail.com</span>
       </a>
     </li>
     <li>
       <a
-        href="tencent://message/?Menu=yes&uin=3263023350&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45"
+        href="tencent://message/?Menu=yes&uin=1263248187&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45"
       >
         <div class="icon">
           <Icon type="qq" />
@@ -27,7 +27,7 @@
       </a>
       <div class="pop">
         <img
-          src="../../../../public/image/Qr_qq.jpg"
+          src="@/assets/image/Qr_qq.jpg"
           alt=""
         />
       </div>
@@ -37,11 +37,11 @@
         <div class="icon weixin">
           <Icon type="weixin" />
         </div>
-        <span>dsfggasas</span>
+        <span>ex_icore</span>
       </a>
       <div class="pop">
         <img
-          src="http://www.duyiedu.com/source/img/%E5%85%AC%E4%BC%97%E5%8F%B7%E4%BA%8C%E7%BB%B4%E7%A0%81.png"
+          src="@/assets/image/Qr_weixin.jpg"
           alt=""
         />
       </div>
@@ -53,8 +53,8 @@
 import Icon from "@/components/Icon";
 export default {
   components: {
-    Icon,
-  },
+    Icon
+  }
 };
 </script>
 

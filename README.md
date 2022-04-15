@@ -1,2 +1,3 @@
-# Homepage
-Izawa's homepage
+# Izawa's Homepage
+
+Welcome to my homepage！

@@ -1,6 +1,6 @@
 <template>
   <div class="site-aside-container">
-    <Avatar url="../../../public/image/head.jpg" />
+    <Avatar :url="HeadImage" />
     <h1 class="title">icore的小窝</h1>
     <Menu />
     <Contact />
@@ -14,12 +14,18 @@
 import Avatar from "@/components/Avatar";
 import Menu from "./Menu";
 import Contact from "./Contact";
+import HeadImage from "@/assets/image/head.jpg";
 export default {
   components: {
     Avatar,
     Menu,
     Contact,
   },
+  data(){
+    return {
+      HeadImage
+    }
+  }
 };
 </script>
 
