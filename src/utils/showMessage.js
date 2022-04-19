@@ -26,9 +26,12 @@ export default function(options = {}) {
   // 将div加入到容器中
 
   // 容器的position是否改动过
-  if (getComputedStyle(container).position === "static") {
-    container.style.position = "relative";
+  if (options.container) {
+    if (getComputedStyle(container).position === "static") {
+      container.style.position = "relative";
+    }
   }
+
   container.appendChild(div);
   // 浏览器强行渲染
   div.clientHeight; // 导致reflow

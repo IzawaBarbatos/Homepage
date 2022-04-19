@@ -1,6 +1,6 @@
 <template>
   <div
-    v-loading="isLoading"
+    v-loading="loading"
     class="home-container"
     ref="container"
     @wheel="handleWheel"
@@ -133,13 +133,11 @@
 </style>
 
 <script>
-import { getBanners } from "@/api/banner";
+import { mapState } from "vuex";
 import CarouselItem from "./Carouselitem";
 import Icon from "@/components/Icon";
-import fetchData from "@/mixins/fetchData.js";
 
 export default {
-  mixins: [fetchData([])],
   components: {
     CarouselItem,
     Icon,
@@ -150,6 +148,9 @@ export default {
       containerHeight: 0, // 整个容器的高度
       switching: false, // 是否正在切换中
     };
+  },
+  created() {
+    this.$store.dispatch("banner/fetchBanner");
   },
   mounted() {
     this.containerHeight = this.$refs.container.clientHeight;
@@ -162,14 +163,12 @@ export default {
     marginTop() {
       return -this.index * this.containerHeight + "px";
     },
+    ...mapState("banner", ["loading", "data"]),
   },
   methods: {
     // 切换轮播图
     switchTo(i) {
       this.index = i;
-    },
-    async fetchData() {
-      return await getBanners();
     },
     handleWheel(e) {
       if (this.switching) {
